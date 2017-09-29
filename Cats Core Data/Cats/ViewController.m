@@ -46,7 +46,7 @@
     
     
     //this query component can seperate the entire key and value of the entire thing.
-    components.query = @"method=flickr.photos.search&api_key=c7049e84540c2a5084fedc19025bb099&tags=userinput &has_geo=1&extras=geo&format=json&nojsoncallback=1";
+    components.query = @"method=flickr.photos.search&api_key=c7049e84540c2a5084fedc19025bb099&tags=userinput &has_geo=1&extras=geo,url_sq&format=json&nojsoncallback=1";
     //create a new mutable array.
     NSMutableArray *queryItems = [components.queryItems mutableCopy];
     

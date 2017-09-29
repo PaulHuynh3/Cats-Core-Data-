@@ -21,8 +21,8 @@
     _server = info[@"server"];
     _title = info[@"title"];
     _farm = [info[@"farm"] integerValue];
-    _latitude = info[@"latitude"];
-    _longitude = info[@"longitude"];
+    _latitude = [info[@"latitude"]doubleValue];
+    _longitude = [info[@"longitude"]doubleValue];
     
     }
     return self;
@@ -40,11 +40,14 @@
 }
 
 
--(void)gotLocation:(double)latitude longitude:(double)longitude {
-    
-    _coordinate = CLLocationCoordinate2DMake(latitude, longitude);
-    
+//Overriding the getter of this property and setting it to the lat and long.
+-(CLLocationCoordinate2D)coordinate{
+
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake(self.latitude, self.longitude);
+    return location;
 }
+
+
 
 
 

@@ -17,8 +17,8 @@
 @property (nonatomic,strong) NSString* secret;
 @property (nonatomic,strong) NSString* server;
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, strong) NSString* latitude;
-@property (nonatomic, strong) NSString* longitude;
+@property (nonatomic, assign) double latitude;
+@property (nonatomic, assign) double longitude;
 
 
 
@@ -26,7 +26,7 @@
 
 @property (nonatomic,strong) UIImage* image;
 
-//required property
+//required property for the mkAnontation.. we override this getter property. in the .m file.
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 
