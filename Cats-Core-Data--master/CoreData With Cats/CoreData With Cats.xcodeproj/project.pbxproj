@@ -17,7 +17,7 @@
 		DA3986711F7EFEFC00919149 /* CatPhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3986701F7EFEFC00919149 /* CatPhotoCollectionViewCell.m */; };
 		DA3986741F7EFF2E00919149 /* FlickrAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3986731F7EFF2E00919149 /* FlickrAPI.m */; };
 		DA3986771F7EFF5200919149 /* FlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3986761F7EFF5200919149 /* FlickrPhoto.m */; };
-		DA39867A1F7F018900919149 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA3986791F7F018900919149 /* Main.storyboard */; };
+		DAD135DE1F7F3DC900F0D6CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAD135DD1F7F3DC900F0D6CE /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +40,11 @@
 		DA3986751F7EFF5200919149 /* FlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrPhoto.h; sourceTree = "<group>"; };
 		DA3986761F7EFF5200919149 /* FlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrPhoto.m; sourceTree = "<group>"; };
 		DA3986781F7EFF9A00919149 /* Secret.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Secret.h; sourceTree = "<group>"; };
-		DA3986791F7F018900919149 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../../../../Main.storyboard; sourceTree = "<group>"; };
+		DAD135DD1F7F3DC900F0D6CE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		DAD135E21F7F408700F0D6CE /* Photo+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Photo+CoreDataClass.h"; path = "../Photo+CoreDataClass.h"; sourceTree = "<group>"; };
+		DAD135E31F7F408700F0D6CE /* Photo+CoreDataClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Photo+CoreDataClass.m"; path = "../Photo+CoreDataClass.m"; sourceTree = "<group>"; };
+		DAD135E41F7F408700F0D6CE /* Photo+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "Photo+CoreDataProperties.h"; path = "../Photo+CoreDataProperties.h"; sourceTree = "<group>"; };
+		DAD135E51F7F408700F0D6CE /* Photo+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "Photo+CoreDataProperties.m"; path = "../Photo+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,24 +77,9 @@
 		DA3986511F7EFE3A00919149 /* CoreData With Cats */ = {
 			isa = PBXGroup;
 			children = (
-				DA3986791F7F018900919149 /* Main.storyboard */,
-				DA3986551F7EFE3A00919149 /* AppDelegate.h */,
-				DA3986561F7EFE3A00919149 /* AppDelegate.m */,
-				DA3986581F7EFE3A00919149 /* ViewController.h */,
-				DA3986591F7EFE3A00919149 /* ViewController.m */,
-				DA39866C1F7EFEAB00919149 /* DetailedViewController.h */,
-				DA39866D1F7EFEAB00919149 /* DetailedViewController.m */,
-				DA39866F1F7EFEFC00919149 /* CatPhotoCollectionViewCell.h */,
-				DA3986701F7EFEFC00919149 /* CatPhotoCollectionViewCell.m */,
-				DA3986611F7EFE3A00919149 /* Assets.xcassets */,
-				DA3986631F7EFE3A00919149 /* LaunchScreen.storyboard */,
-				DA3986721F7EFF2E00919149 /* FlickrAPI.h */,
-				DA3986731F7EFF2E00919149 /* FlickrAPI.m */,
-				DA3986751F7EFF5200919149 /* FlickrPhoto.h */,
-				DA3986761F7EFF5200919149 /* FlickrPhoto.m */,
-				DA3986781F7EFF9A00919149 /* Secret.h */,
-				DA3986661F7EFE3A00919149 /* Info.plist */,
-				DA39865E1F7EFE3A00919149 /* CoreData_With_Cats.xcdatamodeld */,
+				DAD135E11F7F403F00F0D6CE /* View */,
+				DAD135E01F7F403D00F0D6CE /* Controller */,
+				DAD135DF1F7F403A00F0D6CE /* Model */,
 				DA3986521F7EFE3A00919149 /* Supporting Files */,
 			);
 			path = "CoreData With Cats";
@@ -99,9 +88,52 @@
 		DA3986521F7EFE3A00919149 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DA3986611F7EFE3A00919149 /* Assets.xcassets */,
+				DA3986631F7EFE3A00919149 /* LaunchScreen.storyboard */,
+				DA3986661F7EFE3A00919149 /* Info.plist */,
 				DA3986531F7EFE3A00919149 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAD135DF1F7F403A00F0D6CE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DA3986551F7EFE3A00919149 /* AppDelegate.h */,
+				DA3986561F7EFE3A00919149 /* AppDelegate.m */,
+				DA3986721F7EFF2E00919149 /* FlickrAPI.h */,
+				DA3986731F7EFF2E00919149 /* FlickrAPI.m */,
+				DA3986751F7EFF5200919149 /* FlickrPhoto.h */,
+				DA3986761F7EFF5200919149 /* FlickrPhoto.m */,
+				DA3986781F7EFF9A00919149 /* Secret.h */,
+				DA39865E1F7EFE3A00919149 /* CoreData_With_Cats.xcdatamodeld */,
+				DAD135E21F7F408700F0D6CE /* Photo+CoreDataClass.h */,
+				DAD135E31F7F408700F0D6CE /* Photo+CoreDataClass.m */,
+				DAD135E41F7F408700F0D6CE /* Photo+CoreDataProperties.h */,
+				DAD135E51F7F408700F0D6CE /* Photo+CoreDataProperties.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DAD135E01F7F403D00F0D6CE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DA3986581F7EFE3A00919149 /* ViewController.h */,
+				DA3986591F7EFE3A00919149 /* ViewController.m */,
+				DA39866C1F7EFEAB00919149 /* DetailedViewController.h */,
+				DA39866D1F7EFEAB00919149 /* DetailedViewController.m */,
+				DA39866F1F7EFEFC00919149 /* CatPhotoCollectionViewCell.h */,
+				DA3986701F7EFEFC00919149 /* CatPhotoCollectionViewCell.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		DAD135E11F7F403F00F0D6CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAD135DD1F7F3DC900F0D6CE /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,8 +194,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA39867A1F7F018900919149 /* Main.storyboard in Resources */,
 				DA3986651F7EFE3A00919149 /* LaunchScreen.storyboard in Resources */,
+				DAD135DE1F7F3DC900F0D6CE /* Main.storyboard in Resources */,
 				DA3986621F7EFE3A00919149 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -333,6 +365,7 @@
 				DA39866B1F7EFE3A00919149 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -10,6 +10,8 @@
 #import "FlickrAPI.h"
 #import "CatPhotoCollectionViewCell.h"
 #import "DetailedViewController.h"
+#import "AppDelegate.h"
+#import "Photo+CoreDataClass.h"
 
 @interface ViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
 
@@ -17,12 +19,19 @@
 
 @property (nonatomic,strong) NSArray <FlickrPhoto*> *catPhotoArray;
 
+
+@property (nonatomic) AppDelegate *appDelegate;
+@property (nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic) NSArray <Photo *> *photoArray;
+
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.managedObjectContext = self.appDelegate.persistentContainer.viewContext;
     
     [self networkRequest:@"wolves" complete:^(NSArray<FlickrPhoto *> *results) {
         self.catPhotoArray = results;
@@ -105,6 +114,18 @@
     
     [dataTask resume];
 }
+
+
+#pragma mark saving all propepties inside the array.
+-(void)fetchData{
+    NSFetchRequest *fetchInfo = [NSFetchRequest fetchRequestWithEntityName:@"Photo"];
+    NSArray <Photo *> *photoInformation = [self.managedObjectContext executeFetchRequest:fetchInfo error:nil];
+    self.photoArray = photoInformation;
+    [self.collectionView reloadData];
+
+}
+
+
 
 
 
